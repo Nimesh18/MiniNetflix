@@ -1,0 +1,59 @@
+header {
+    position: fixed;
+    top:0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.logo {
+    width: 167px;
+    padding: 2px;
+}
+
+.background {
+    background-color: rgb(38, 38, 38);
+}
+
+.nav > li > a:hover {
+    text-decoration: none;
+    background-color: rgb(80, 76, 76);
+    color: whitesmoke;
+}
+
+nav > li > a:focus, nav > li > a:visited, nav > li > a:active {
+    background-color: rgb(80, 76, 76);
+}
+
+.no-decoration {
+    text-decoration: none;
+    color: rgb(116, 108, 108);
+}
+
+.clickable:hover {
+    background-color: rgb(80, 76, 76);
+    cursor: pointer;
+}
+
+li > a.active {
+    color: red;
+    background-color: rgb(38, 38, 38);
+}
+
+.search-input {
+    background-color: transparent;
+    border: none;
+    width: 200px;
+    min-width: 200px;
+    margin-left: 10px;
+
+}
+
+.search-box {
+    padding: 15px 15px;
+    color: whitesmoke;
+}
+
+.search {
+    position: relative;
+}

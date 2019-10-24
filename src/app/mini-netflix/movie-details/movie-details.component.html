@@ -1,0 +1,31 @@
+<div id="slider" class="movie-box-container slide-in"
+    [ngStyle]="{ 'background-image': movie?.backdrop_path ? 'url(' + image_base_url + movie?.backdrop_path + ')': 
+    movie?.poster_path ? 'url(' + image_base_url + movie?.poster_path + ')': null }">
+    <section class="movie-details">
+        <span class="title">{{movie?.title}}</span>
+        <div class="movie-overview">
+            {{movie?.overview}}
+        </div>
+        <ng-container *ngFor="let genre of movie?.genres">
+            <span class="genre">{{genre?.name}}</span> &nbsp;
+        </ng-container>
+        <div>
+            <span class="glyphicon glyphicon-star yellow">
+            </span>
+                {{movie?.vote_average}}
+        </div>
+        <ng-container *ngFor="let lang of movie?.spoken_languages; last as isLast;">
+                <span>{{lang?.name}}</span>
+                <span *ngIf="!isLast">, </span>
+        </ng-container>
+        <div *ngIf="movie?.runtime">
+            {{movie?.runtime}} minutes
+        </div>
+        <div class="extended-details" *ngIf="extendedDetails">
+            Director: {{extendedDetails?.Director}}   <br/>
+            Actors: {{extendedDetails?.Actors}}
+        </div>
+        <div class="release-year">Released: {{movie?.release_date | date: 'longDate' }}</div>
+
+    </section>
+</div>

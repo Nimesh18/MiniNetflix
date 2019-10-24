@@ -1,0 +1,42 @@
+.page {
+  color: whitesmoke;
+  font-weight: 400;
+  margin-left: 5px;
+}
+
+.outer {
+  position: relative;
+  width: 100%;
+}
+
+.hr {
+  position: relative;
+  float: right;
+  width: 90%; 
+  border-bottom: 1px solid whitesmoke; 
+  line-height: 0.1em;
+  margin: 10px 10px 20px; 
+  color: whitesmoke;
+} 
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 6px solid red;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 1s linear infinite; /* Safari */
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

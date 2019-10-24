@@ -1,0 +1,15 @@
+<div (element-scroll-percentage)="loadMore($event)">
+    <ng-container *ngFor="let movieArr of movies; let i=index">
+        <div class="outer">
+            <span class="page">Page {{i+1}} / {{totalPages}}</span>
+            <span class="hr"></span>
+            <div style="clear: both;"></div>
+        </div>
+        <movie-page>
+            <ng-container *ngFor="let movie of movieArr">
+                <movie [movie]="movie"></movie>
+            </ng-container>
+        </movie-page>
+    </ng-container>
+    <div *ngIf="showLoadingImage" class="loader"></div>
+</div>

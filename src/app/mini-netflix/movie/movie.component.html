@@ -1,0 +1,14 @@
+<div class="card cover" [ngStyle]="{ 'background-image': movie?.poster_path ? 'url(' + image_base_url + movie?.poster_path + ')': 
+        movie?.backdrop_path ? 'url(' + image_base_url + movie?.backdrop_path + ')': null }">
+    <div class="movie-details">
+        <span class="title" [routerLink]="['/movies', movie.id]">{{movie?.title}}</span>
+        <div class="row-year-star">
+            <span class="year" [routerLink]="['/movies', movie.id]">{{movie?.release_date | date: 'yyyy' }}</span>
+            <span id="star" class="glyphicon glyphicon-star" aria-hidden="true" (click)="favourite(movie?.id, movie)"
+                [ngClass]="isFavourite(movie?.id)"></span>
+        </div>
+        <div class="row-details">
+            <button class="btn details-btn" [routerLink]="['/movies', movie.id]">Details</button>
+        </div>
+    </div>
+</div>

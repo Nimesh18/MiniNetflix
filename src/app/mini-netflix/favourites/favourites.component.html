@@ -1,0 +1,8 @@
+<movie-page>
+    <ng-container *ngFor="let movie of movies">
+        <movie [movie]="movie" (favouriteBtnClick)="favourite($event, movie)"></movie>
+    </ng-container>
+    <div *ngIf="movies.length === 0" class="no-favourites">
+        Your favourites list is empty
+    </div>
+</movie-page>

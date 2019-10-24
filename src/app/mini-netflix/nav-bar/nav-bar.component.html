@@ -1,0 +1,26 @@
+<header class="background">
+    <nav>
+        <div class="navbar-header clickable" [routerLink]="['/movies']">
+            <img class="logo" src="../../../assets/images/netflix-logo-transparent.png" alt="Netflix"/>
+        </div>
+        <ul class="nav navbar-nav">
+            <li>
+                <a id="movies-menu-item" class="no-decoration" [routerLink]="['/movies']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">All Movies</a>
+            </li>
+            <li>
+                <a class="no-decoration" [routerLink]="['/favourites']" routerLinkActive="active">Favourites</a>
+            </li>
+            <li>
+                <div class="search">
+                    <div class="search-box">
+                        <span class="glyphicon glyphicon-search clickable" (click)="searchMovie()"></span>
+                        <input type="text" placeholder="Search..." class="search-input" name="searchControl" [formControl]="searchControl"/>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <button class="search-box search-input clickable" (click)="clearSearch()">Clear search results</button>
+            </li>
+        </ul>
+    </nav>
+</header>

@@ -1,0 +1,117 @@
+  .card {
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    margin: 0 8px 16px;
+    flex-direction: row;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .cover {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 250px;
+    height: fit-content;
+    min-width: 150px;
+    max-width: 150px;
+    color: azure;
+    position: relative;
+  }
+
+  .title {
+    font-size: 125%;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+    font-weight: 900;
+    opacity: 0;
+  }
+
+  :host():hover {
+    transform: translateY(-3px) scaleX(1.1) scaleY(1.1);
+    box-shadow: 0 4px 17px rgba(yellow, 0.35);
+  }
+
+  .card:hover .row-year-star, .card:hover .row-details, .card:hover .title  {
+    opacity: 1;
+}
+
+
+  .year {
+      position: relative;
+      text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+      font-weight: 900;
+      border: 5px;
+  }
+
+  .movie-details {
+      left: 5px;
+      height: 100%;
+      width: 100%;
+      min-width: 100%;
+      min-height: 100%;
+  }
+
+  #star {
+      cursor: pointer;
+      position: relative;
+      float: right;
+      margin-right: 10%;
+      font-size: 120%;
+      text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+  }
+
+  #star:hover {
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+        1px 1px 0 #000,
+        2px 2px 8px yellow;
+  }
+
+  .row-year-star {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      min-width: 100%;
+      opacity: 0;
+  }
+
+  .row-details {
+      position: absolute;
+      bottom: 1px;
+      width: 100%;
+      min-width: 100%;
+      opacity: 0;
+  }
+
+  .details-btn {
+      font-size: 10px;
+      font-weight: bold;
+      padding: 1px 2px;
+      color: red;
+      background-color: rgb(38, 38, 38);
+      float: right;
+      margin-right: 5px;
+  }
+
+  .details-btn:hover {
+      font-size: 11px;
+  }
+
+  .yellow {
+      color: yellow;
+  }
